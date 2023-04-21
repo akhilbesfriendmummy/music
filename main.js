@@ -1,11 +1,13 @@
-var song="";
+var song1="";
+var song2="";
 leftWristX=0;
 rightWristX=0;
 rightWristY=0;
 leftWristY=0;
 
 function preload(){
-    song=loadSound("music.mp3");
+    song1=loadSound("music.mp3");
+    song2=loadSound("music2.mp3");
 }
 function setup(){
     canvas=createCanvas(600,500);
@@ -18,12 +20,7 @@ function setup(){
 function draw(){
     image(video,0,0,600,500);
 }
-function play(){
-    song.play();
-    song.setVolume(1);
-    song.rate(1);
-    
-}
+
 function modelLoaded(){
     console.log('poseNet is initialised');
 }
